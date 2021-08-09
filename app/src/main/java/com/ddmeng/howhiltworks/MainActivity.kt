@@ -21,6 +21,9 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var dataSource: DataSource
+
+    @Inject
+    lateinit var tool: Tool
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
