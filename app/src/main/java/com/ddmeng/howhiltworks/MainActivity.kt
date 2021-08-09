@@ -18,6 +18,9 @@ import javax.inject.Inject
 class MainActivity : ComponentActivity() {
     @Inject
     lateinit var analytics: AnalyticsAdapter
+
+    @Inject
+    lateinit var dataSource: DataSource
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
