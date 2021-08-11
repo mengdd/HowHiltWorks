@@ -19,8 +19,13 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var analytics: AnalyticsAdapter
 
+    @LocalSource
     @Inject
-    lateinit var dataSource: DataSource
+    lateinit var localSource: DataSource
+
+    @RemoteSource
+    @Inject
+    lateinit var remoteSource: DataSource
 
     @Inject
     lateinit var tool: Tool
