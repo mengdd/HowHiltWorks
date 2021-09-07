@@ -1,2 +1,3 @@
 rootProject.name = "HowHiltWorks"
 include ':app'
+include ':mylibrary'

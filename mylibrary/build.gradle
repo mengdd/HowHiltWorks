@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
@@ -9,16 +9,11 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.ddmeng.howhiltworks"
-        minSdk 24
+        minSdk 21
         targetSdk 30
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary true
-        }
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -42,13 +37,8 @@ android {
     }
 }
 
-hilt {
-    enableExperimentalClasspathAggregation = true
-}
-
 dependencies {
 
-    implementation project(":mylibrary")
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
