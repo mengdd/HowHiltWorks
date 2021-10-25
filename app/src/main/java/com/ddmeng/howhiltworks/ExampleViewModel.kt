@@ -15,6 +15,7 @@ class ExampleViewModel @Inject constructor(
 ) : ViewModel() {
     init {
         Log.i("ExampleViewModel", "build information: $buildInformation")
+        Log.i("ExampleViewModel", "repository $repository")
     }
 
     fun print() {
