@@ -31,7 +31,7 @@ class SecondViewModel @AssistedInject constructor(
             assistedFactory: Factory,
             noteId: String
         ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 return assistedFactory.create(noteId) as T
             }
         }
