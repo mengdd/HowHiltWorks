@@ -1,4 +1,4 @@
-package com.ddmeng.howhiltworks
+package com.ddmeng.howhiltworks.entrypoint
 
 import android.content.ContentProvider
 import android.content.ContentValues
