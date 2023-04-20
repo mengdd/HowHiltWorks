@@ -15,6 +15,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import com.ddmeng.howhiltworks.qualifier.DataSource
+import com.ddmeng.howhiltworks.qualifier.LocalSource
+import com.ddmeng.howhiltworks.qualifier.RemoteSource
 import com.ddmeng.howhiltworks.ui.theme.HowHiltWorksTheme
 import com.ddmeng.mylibrary.SecondActivity
 import dagger.hilt.EntryPoints

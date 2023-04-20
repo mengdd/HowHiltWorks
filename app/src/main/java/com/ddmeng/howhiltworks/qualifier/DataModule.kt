@@ -1,4 +1,4 @@
-package com.ddmeng.howhiltworks
+package com.ddmeng.howhiltworks.qualifier
 
 import dagger.Binds
 import dagger.Module
