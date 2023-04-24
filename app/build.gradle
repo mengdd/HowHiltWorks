@@ -19,10 +19,12 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        buildConfigField("Boolean", "testFlag", "true")
     }
 
     buildTypes {
         release {
+            buildConfigField("Boolean", "testFlag", "false")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
