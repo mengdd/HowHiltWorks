@@ -5,6 +5,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Provider
 
 interface MyDynamicTool {
     fun foo()
@@ -36,9 +37,9 @@ class MyLightTool : MyDynamicTool {
 object MyDynamicSampleModule {
 
     @Provides
-    fun provideMyDynamicTool(myHeavyTool: MyHeavyTool, myLightTool: MyLightTool): MyDynamicTool {
+    fun provideMyDynamicTool(myHeavyToolProvider: Provider<MyHeavyTool>, myLightTool: MyLightTool): MyDynamicTool {
         return if (someCondition()) {
-            myHeavyTool
+            myHeavyToolProvider.get()
         } else {
             myLightTool
         }
