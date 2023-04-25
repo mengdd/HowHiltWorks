@@ -3,6 +3,7 @@ package com.ddmeng.howhiltworks
 import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.ddmeng.howhiltworks.dynamic.MyDynamicTool
 import com.ddmeng.howhiltworks.qualifier.PreferencesRepository
 import com.ddmeng.howhiltworks.utils.LogTool
 import com.ddmeng.howhiltworks.utils.MyTool
@@ -18,12 +19,14 @@ class ExampleViewModel @Inject constructor(
     private val myTool: MyTool,
     private val preferencesRepository: PreferencesRepository,
     private val logTool: LogTool,
+    private val dynamicTool: MyDynamicTool,
 ) : ViewModel() {
     init {
         Log.i("ExampleViewModel", "build information: $buildInformation")
         Log.i("ExampleViewModel", "repository $repository")
         myTool.printInformation()
         logTool.print("printing using log tool")
+        dynamicTool.foo()
     }
 
     fun print() {
